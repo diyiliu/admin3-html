@@ -1044,10 +1044,13 @@ h1.page-header {
 .btn-group > .btn:first-child:not(:last-child) {
     border-right: 2px solid #fff;
 }
+
 /*
 .btn-group > .btn:not(first-child):not(:last-child) {
     border-right: 2px solid #fff;
-}*/
+}
+*/
+
 .btn-group > .btn:last-child:not(:first-child) {
-    border-right: 2px solid #fff;
+    border-left: 1px solid #fff;
 }
