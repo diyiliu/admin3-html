@@ -114,33 +114,45 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-heading">用户列表</div>
+                <div class="panel-heading">用户信息</div>
                 <div class="panel-body">
-                    <div class="alert alert-warning" style="display: none;">
-                        <a href="#" class="close" onclick="parentNode.style.display='none'">&times;</a>
-                        <strong>警告！</strong>请选择一个选项。
-                    </div>
-                    <div id="toolbar" class="btn-group">
-                        <button id="btn_add" type="button" class="btn btn-default">
-                            <span class="fa fa-plus fa-fw" aria-hidden="true"></span>新增
-                        </button>
-                        <button id="btn_edit" type="button" class="btn btn-default">
-                            <span class="fa fa-pencil fa-fw" aria-hidden="true"></span>修改
-                        </button>
-                        <button id="btn_delete" type="button" class="btn btn-default">
-                            <span class="fa fa-times fa-fw" aria-hidden="true"></span>删除
-                        </button>
-                    </div>
-                    <table id="userList">
-                        <thead>
-                        <tr>
-                            <th data-field="state" data-checkbox="true">Item ID</th>
-                            <th data-field="id" >Item ID</th>
-                            <th data-field="name" >Item Name</th>
-                            <th data-field="price" >Item Price</th>
-                        </tr>
-                        </thead>
-                    </table>
+                    <form class="form-horizontal col-md-8" action="" method="post">
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="name">姓  名</label>
+                                <div class="col-md-9">
+                                    <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="age">年  龄</label>
+                                <div class="col-md-9">
+                                    <input id="age" name="age" type="text" placeholder="Your age" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="email">邮  箱</label>
+                                <div class="col-md-9">
+                                    <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="message">详  情</label>
+                                <div class="col-md-9">
+                                    <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-12 widget-right">
+                                    <button type="submit" class="btn btn-default btn-md pull-right">提交</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
             </div>
         </div>
@@ -149,29 +161,5 @@
 
 <script src="./js/jquery-1.11.1.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<script src="./js/bootstrap-table.js"></script>
-
-<script>
-    $(function () {
-       var $table =  $('#userList').bootstrapTable({
-            url: './data/data1.json',
-            showRefresh: true,
-            search: true,
-            pagination: true,
-            toolbar: '#toolbar'
-        });
-
-        $('#toolbar :button').on('click', function () {
-            var btn_id = this.id;
-            var selects = $table.bootstrapTable('getSelections');
-            if(btn_id == 'btn_edit'){
-                if(selects.length != 1 ){
-                    $('.alert').show();
-                    return;
-                }
-            }
-        })
-    });
-</script>
 </body>
 </html>
