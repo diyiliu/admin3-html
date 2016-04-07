@@ -118,7 +118,7 @@
                 <div class="panel-body">
                     <div class="alert alert-warning" style="display: none;">
                         <a href="#" class="close" onclick="parentNode.style.display='none'">&times;</a>
-                        <strong>警告！</strong>请选择一个选项。
+                        <strong>警告！</strong><span></span>
                     </div>
                     <div id="toolbar" class="btn-group">
                         <button id="btn_add" type="button" class="btn btn-default">
@@ -127,8 +127,7 @@
                         <button id="btn_edit" type="button" class="btn btn-default">
                             <span class="fa fa-pencil fa-fw" aria-hidden="true"></span>修改
                         </button>
-                        <button id="btn_delete" type="button" class="btn btn-default"
-                                data-toggle="modal" data-target="#myModal">
+                        <button id="btn_delete" type="button" class="btn btn-default">
                             <span class="fa fa-times fa-fw" aria-hidden="true"></span>删除
                         </button>
                     </div>
@@ -186,11 +185,19 @@
             var selects = $table.bootstrapTable('getSelections');
             if (btn_id == 'btn_edit') {
                 if (selects.length != 1) {
+                    $('.alert').find('span').text('请选择一个选项。');
                     $('.alert').show();
                     return;
                 }
             }
             if (btn_id == 'btn_delete') {
+                if(selects.length < 1 ){
+                    $('.alert').find('span').text('请至少选择一个选项。');
+                    $('.alert').show();
+                    return;
+                }
+                $('.alert').hide();
+                $('#myModal').modal('show');
             }
         })
     });
