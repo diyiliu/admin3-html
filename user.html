@@ -131,16 +131,7 @@
                             <span class="fa fa-times fa-fw" aria-hidden="true"></span>删除
                         </button>
                     </div>
-                    <table id="userList">
-                        <thead>
-                        <tr>
-                            <th data-field="state" data-checkbox="true">Item ID</th>
-                            <th data-field="id">Item ID</th>
-                            <th data-field="name">Item Name</th>
-                            <th data-field="price">Item Price</th>
-                        </tr>
-                        </thead>
-                    </table>
+                    <table id="userList"></table>
                 </div>
             </div>
         </div>
@@ -159,7 +150,7 @@
                 ...
             </div>
             <div class="modal-footer">
-                <a href="#" class="btn btn-default"  data-dismiss="modal">Close</a>
+                <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
                 <a href="#" class="btn btn-primary">Save changes</a>
                 <!--
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -181,7 +172,26 @@
             showRefresh: true,
             search: true,
             pagination: true,
-            toolbar: '#toolbar'
+            toolbar: '#toolbar',
+            columns: [
+                {field: 'state', title: '', checkbox: true},
+                {field: 'id', title: 'Item ID'},
+                {field: 'name', title: 'Item Name'},
+                {field: 'price', title: 'Item Price'},
+                {field: 'price', title: 'Item Price'},
+                {
+                    field: '',
+                    title: 'Item Operate',
+                    align: 'center',
+                    formatter: function (value, row, index) {
+                        return [
+                            '<a class=like href=\"javascript:alert(' + row.id + ');\" title="Like">',
+                            '<i class="fa fa-wrench fa-fw"></i>',
+                            '</a>'
+                        ].join('');
+                    }
+                }
+            ]
         });
 
         $('#toolbar :button').on('click', function () {
@@ -195,7 +205,7 @@
                 }
             }
             if (btn_id == 'btn_delete') {
-                if(selects.length < 1 ){
+                if (selects.length < 1) {
                     $('.alert').find('span').text('请至少选择一个选项。');
                     $('.alert').show();
                     return;
