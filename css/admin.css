@@ -763,10 +763,12 @@ h1.page-header {
     width: 100%;
 }
 
+/**
 .datepicker table tr td.old,
 .datepicker table tr td.new {
     color: rgba(255, 255, 255, .50);
 }
+*/
 
 .datepicker table tr td.active,
 .datepicker table tr td.active:hover,
