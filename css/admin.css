@@ -1073,3 +1073,14 @@ h1.page-header {
 .datetimepicker.form-control {
     padding: 6px 12px;
 }
+
+/**
+.bootstrap-datetimepicker-widget a {
+    color: #777777;
+}
+
+.bootstrap-datetimepicker-widget a span.glyphicon-time,
+.bootstrap-datetimepicker-widget a span.glyphicon-calendar {
+    color: #1ebfae;
+}
+*/
