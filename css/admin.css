@@ -1052,3 +1052,22 @@ h1.page-header {
 .modal-dialog {
     margin-top: 20%;
 }
+
+/**
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-修改 summernote
+*/
+
+.note-editor.note-frame {
+    border: 1px solid #eee;
+    box-shadow: none;
+    margin: 0;
+}
+
+/**
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-修改 datepicker,datetimepicker
+*/
+
+.datepicker.form-control,
+.datetimepicker.form-control {
+    padding: 6px 12px;
+}
