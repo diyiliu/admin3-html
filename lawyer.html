@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - 首页</title>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+
+    <!--Icons-->
+    <script src="./js/lumino.glyphs.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#sidebar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span>I USE LAW</span>Admin</a>
+            <ul class="user-menu">
+                <li class="dropdown pull-right">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <svg class="glyph stroked male-user">
+                            <use xlink:href="#stroked-male-user"></use>
+                        </svg>
+                        User <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">
+                            <svg class="glyph stroked male-user">
+                                <use xlink:href="#stroked-male-user"></use>
+                            </svg>
+                            Profile</a></li>
+                        <li><a href="#">
+                            <svg class="glyph stroked gear">
+                                <use xlink:href="#stroked-gear"></use>
+                            </svg>
+                            Settings</a></li>
+                        <li><a href="#">
+                            <svg class="glyph stroked cancel">
+                                <use xlink:href="#stroked-cancel"></use>
+                            </svg>
+                            Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+    <form role="search">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+        </div>
+    </form>
+    <ul class="nav menu">
+        <li><a href="user.html"><i class="fa fa-user fa-fw"></i> 用户管理</a></li>
+        <li><a href="publish.html"><i class="fa fa-cloud-upload fa-fw"></i> 发布新闻</a></li>
+        <li><a href="widgets.html"><i class="fa fa-file fa-fw"></i> 案例添加</a></li>
+        <li class="active"><a href="lawyer.html"><i class="fa fa-file fa-fw"></i> 律师管理</a></li>
+        <li class="parent ">
+            <a data-toggle="collapse" href="#sub-item-1" id="config">
+                <i class="fa fa-cogs fa-fw"></i> 系统配置
+            </a>
+            <ul class="children collapse" id="sub-item-1">
+                <li>
+                    <a class="cfg-form" href="cfg-form.html">
+                        表单配置
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="#">
+                        Sub Item 3
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li><a href="widgets.html"><i class="fa fa-sitemap fa-fw"></i> 组织管理</a></li>
+        <li><a href="widgets.html"><i class="fa fa-key fa-fw"></i> 权限列表</a></li>
+        <li><a href="widgets.html"><i class="fa fa-tags fa-fw"></i> 日志查看</a></li>
+        <li role="presentation" class="divider"></li>
+        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Login Page</a></li>
+    </ul>
+</div><!--/.sidebar-->
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="index.html"><i class="fa fa-home fa-fw"></i></a></li>
+            <li class="active">律师管理</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content-container">
+                <div class="content-heading">律师列表</div>
+                <div class="row">
+                    <div class="col-md-3 content-widget white-bg">
+                        <div class="tool">
+                            <a href="#"><i class="fa fa-edit"></i></a>
+                            <a href="#"><i class="fa fa-trash-o"></i></a>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img class="media-object img-circle" src="./img/person.jpg"></a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="blue-text">李莉</h3>
+                                <p class="small">合伙人律师</p>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="circle blue-bg"></div>
+                                    </td>
+                                    <td class="title">关 注 度</td>
+                                    <td>22</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle pink-bg"></div>
+                                    </td>
+                                    <td class="title">从业年限</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle yellow-bg"></div>
+                                    </td>
+                                    <td class="title">满 意 率</td>
+                                    <td>8</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-3 content-widget white-bg">
+                        <div class="tool">
+                            <a href="#"><i class="fa fa-edit"></i></a>
+                            <a href="#"><i class="fa fa-trash-o"></i></a>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img class="media-object img-circle" src="./img/person1.jpg"></a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="blue-text">李娜</h3>
+                                <p class="small">合伙人律师</p>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="circle blue-bg"></div>
+                                    </td>
+                                    <td class="title">关 注 度</td>
+                                    <td>22</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle pink-bg"></div>
+                                    </td>
+                                    <td class="title">从业年限</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle yellow-bg"></div>
+                                    </td>
+                                    <td class="title">满 意 率</td>
+                                    <td>8</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-3 content-widget white-bg">
+                        <div class="tool">
+                            <a href="#"><i class="fa fa-edit"></i></a>
+                            <a href="#"><i class="fa fa-trash-o"></i></a>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img class="media-object img-circle" src="./img/person2.jpg"></a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="blue-text">陈娜</h3>
+                                <p class="small">合伙人律师</p>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="circle blue-bg"></div>
+                                    </td>
+                                    <td class="title">关 注 度</td>
+                                    <td>22</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle pink-bg"></div>
+                                    </td>
+                                    <td class="title">从业年限</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle yellow-bg"></div>
+                                    </td>
+                                    <td class="title">满 意 率</td>
+                                    <td>8</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 content-widget white-bg">
+                        <div class="tool">
+                            <a href="#"><i class="fa fa-edit"></i></a>
+                            <a href="#"><i class="fa fa-trash-o"></i></a>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img class="media-object img-circle" src="./img/person5.jpg"></a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="blue-text">李莉</h3>
+                                <p class="small">合伙人律师</p>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="circle blue-bg"></div>
+                                    </td>
+                                    <td class="title">关 注 度</td>
+                                    <td>22</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle pink-bg"></div>
+                                    </td>
+                                    <td class="title">从业年限</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle yellow-bg"></div>
+                                    </td>
+                                    <td class="title">满 意 率</td>
+                                    <td>8</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-3 content-widget white-bg">
+                        <div class="tool">
+                            <a href="#"><i class="fa fa-edit"></i></a>
+                            <a href="#"><i class="fa fa-trash-o"></i></a>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img class="media-object img-circle" src="./img/person3.jpg"></a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="blue-text">张岩</h3>
+                                <p class="small">合伙人律师</p>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="circle blue-bg"></div>
+                                    </td>
+                                    <td class="title">关 注 度</td>
+                                    <td>22</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle pink-bg"></div>
+                                    </td>
+                                    <td class="title">从业年限</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle yellow-bg"></div>
+                                    </td>
+                                    <td class="title">满 意 率</td>
+                                    <td>8</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-3 content-widget white-bg">
+                        <div class="tool">
+                            <a href="#"><i class="fa fa-edit"></i></a>
+                            <a href="#"><i class="fa fa-trash-o"></i></a>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img class="media-object img-circle" src="./img/person4.jpg"></a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="blue-text">成宏骏</h3>
+                                <p class="small">合伙人律师</p>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="circle blue-bg"></div>
+                                    </td>
+                                    <td class="title">关 注 度</td>
+                                    <td>22</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle pink-bg"></div>
+                                    </td>
+                                    <td class="title">从业年限</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle yellow-bg"></div>
+                                    </td>
+                                    <td class="title">满 意 率</td>
+                                    <td>8</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 content-widget white-bg">
+                        <div class="tool">
+                            <a href="#"><i class="fa fa-edit"></i></a>
+                            <a href="#"><i class="fa fa-trash-o"></i></a>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img class="media-object img-circle" src="./img/person.jpg"></a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="blue-text">李莉</h3>
+                                <p class="small">合伙人律师</p>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="circle blue-bg"></div>
+                                    </td>
+                                    <td class="title">关 注 度</td>
+                                    <td>22</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle pink-bg"></div>
+                                    </td>
+                                    <td class="title">从业年限</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle yellow-bg"></div>
+                                    </td>
+                                    <td class="title">满 意 率</td>
+                                    <td>8</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-3 content-widget white-bg">
+                        <div class="tool">
+                            <a href="#"><i class="fa fa-edit"></i></a>
+                            <a href="#"><i class="fa fa-trash-o"></i></a>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img class="media-object img-circle" src="./img/person1.jpg"></a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="blue-text">李娜</h3>
+                                <p class="small">合伙人律师</p>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="circle blue-bg"></div>
+                                    </td>
+                                    <td class="title">关 注 度</td>
+                                    <td>22</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle pink-bg"></div>
+                                    </td>
+                                    <td class="title">从业年限</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle yellow-bg"></div>
+                                    </td>
+                                    <td class="title">满 意 率</td>
+                                    <td>8</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-3 content-widget white-bg">
+                        <div class="tool">
+                            <a href="#"><i class="fa fa-edit"></i></a>
+                            <a href="#"><i class="fa fa-trash-o"></i></a>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#"><img class="media-object img-circle" src="./img/person2.jpg"></a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="blue-text">陈娜</h3>
+                                <p class="small">合伙人律师</p>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="circle blue-bg"></div>
+                                    </td>
+                                    <td class="title">关 注 度</td>
+                                    <td>22</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle pink-bg"></div>
+                                    </td>
+                                    <td class="title">从业年限</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="circle yellow-bg"></div>
+                                    </td>
+                                    <td class="title">满 意 率</td>
+                                    <td>8</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--/.main-->
+
+<script src="./js/jquery-1.11.1.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+</body>
+</html>

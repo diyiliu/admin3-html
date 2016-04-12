@@ -1,9 +1,6 @@
-/*
-Lumino Admin Bootstrap Template
-Version 1.0
+/**
+    admin css
 */
-
-/*Global Styles*/
 
 body {
     background: #f1f4f7;
@@ -101,10 +98,6 @@ h3, h4 {
 
 .form-control:focus {
     border: 1px solid #1ebfae;
-    /*
-    outline: 0;
-    box-shadow: inset 0px 0px 0px 1px #1ebfae;
-    */
 }
 
 .navbar-header .navbar-brand {
@@ -120,7 +113,6 @@ h3, h4 {
 }
 
 /*Buttons*/
-
 a.btn:hover,
 button:hover {
     opacity: 0.8;
@@ -325,13 +317,16 @@ a.bg-danger:hover {
 
 .panel {
     border: 0;
+    margin-top: 20px;
 }
 
 .panel-heading {
     font-size: 18px;
     font-weight: 300;
     letter-spacing: 0.025em;
+    /*
     height: 66px;
+    */
     line-height: 45px;
 }
 
@@ -551,7 +546,6 @@ a.bg-danger:hover {
 }
 
 /*Navbar*/
-
 .navbar {
     border: 0;
 }
@@ -565,9 +559,9 @@ a.bg-danger:hover {
 .navbar input:focus {
     color: #fff;
     background: #555;
-    border: 1px solid #1ebfae;
+    border-color: #1ebfae;
     outline: 0;
-    box-shadow: inset 0px 0px 0px 1px #1ebfae;
+    box-shadow: inset 0 1px 1px rgba(19, 137, 95, .075), 0 0 8px rgba(19, 137, 95, .6);
 }
 
 .user-menu {
@@ -593,7 +587,6 @@ a.bg-danger:hover {
     display: block;
     background-color: #fff;
     padding: 0;
-    display: none;
 }
 
 .sidebar form {
@@ -613,6 +606,9 @@ a.bg-danger:hover {
         display: block;
         margin: 0;
         padding: 0;
+        /*
+        min-width: 250px;
+        */
         overflow-x: hidden;
         overflow-y: auto;
         background-color: #fff;
@@ -622,6 +618,10 @@ a.bg-danger:hover {
     .navbar-header {
         width: 100%;
     }
+}
+
+.sidebar .nav {
+    font-weight: 300;
 }
 
 .sidebar ul.nav a:hover,
@@ -654,6 +654,7 @@ a.bg-danger:hover {
     height: 40px;
     background: #f9f9f9;
     color: #1ebfae !important;
+    text-decoration: none;
 }
 
 .sidebar ul.nav li.current a {
@@ -695,6 +696,7 @@ a.bg-danger:hover {
     background: #e9ecf2;
     box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
     margin: 0;
+    font-size: 1.1em;
 }
 
 h1.page-header {
@@ -764,10 +766,10 @@ h1.page-header {
     width: 100%;
 }
 
-/*
+/**
 .datepicker table tr td.old,
 .datepicker table tr td.new {
-	color: rgba(255, 255, 255, .50);
+    color: rgba(255, 255, 255, .50);
 }
 */
 
@@ -1039,10 +1041,13 @@ h1.page-header {
 }
 
 .content-heading {
-    font-size: 24px;
+    padding: 10px 15px;
+    font-size: 18px;
     font-weight: 300;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.025em;
+    /*
     height: 66px;
+    */
     line-height: 45px;
 }
 
@@ -1063,31 +1068,12 @@ h1.page-header {
 }
 
 .content-widget .tool .fa {
-    display: inline-block;
+    display:inline-block;
     cursor: pointer;
     border-radius: 15px;
     color: white;
     cursor: pointer;
     padding: 4px 5px;
-}
-
-.content-widget .media {
-    margin-bottom: 20px;
-}
-
-.content-widget img.media-object {
-    border: 1px solid #ccc;
-    padding: 3px;
-    width: 98px;
-    height: 98px;
-}
-
-.content-widget table {
-    margin-bottom: 0;
-}
-
-.content-widget table > tbody > tr > td {
-    padding: 10px 15px;
 }
 
 .white-bg .tool .fa {
@@ -1098,109 +1084,20 @@ h1.page-header {
     background: #83ccd1;
 }
 
-.circle {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-}
-
-.blue-text {
-    color: #39ADB4;
-}
-
-.white-text {
-    color: white;
-}
-
-.green-bg {
-    background-color: #39ADB4;
-}
-
-.yellow-bg {
-    background-color: #D8D138;
-}
-
-.white-bg {
-    background-color: white;
-}
-
-.white-bg .fa-times {
-    background-color: #d7d7d7;
-}
-
-.white-bg .fa-times:hover {
-    background: #83ccd1;
-}
-
-.orange-bg {
-    background-color: #F17A54;
-    color: white;
-}
-
-.orange-bg .fa-times {
-    background-color: #F0A790;
-}
-
-.orange-bg .fa-times:hover {
-    background-color: #E14311;
-}
-
-.pink-bg {
-    background-color: #D7425C;
-    color: white;
-}
-
-.pink-bg .fa-times {
-    background-color: #E57C8F;
-}
-
-.pink-bg .fa-times:hover {
-    background-color: #BD1F3B;
-}
-
-.blue-bg {
-    background-color: #3275BB;
-    color: white;
-}
-
-.blue-bg .fa-times {
-    background-color: #6792C0;
-}
-
-.blue-bg .fa-times:hover {
-    background-color: #2C639C;
-}
-
 .flex-row {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
 }
-
 .col-1 {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
 }
-
 .col-2 {
     -webkit-flex: 2;
     -ms-flex: 2;
     flex: 2;
-}
-
-/**
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-修改 summernote
-*/
-
-.note-editor.note-frame {
-    border: 1px solid #eee;
-    box-shadow: none;
-    margin: 0;
-}
-
-.note-toolbar.panel-heading {
-    height: auto;
 }
 
 /**
@@ -1249,7 +1146,32 @@ h1.page-header {
     margin-top: 20%;
 }
 
+/**
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-修改 summernote
+*/
 
+.note-editor.note-frame {
+    border: 1px solid #eee;
+    box-shadow: none;
+    margin: 0;
+}
 
+/**
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-修改 datepicker,datetimepicker
+*/
 
+.datepicker.form-control,
+.datetimepicker.form-control {
+    padding: 6px 12px;
+}
 
+/**
+.bootstrap-datetimepicker-widget a {
+    color: #777777;
+}
+
+.bootstrap-datetimepicker-widget a span.glyphicon-time,
+.bootstrap-datetimepicker-widget a span.glyphicon-calendar {
+    color: #1ebfae;
+}
+*/
