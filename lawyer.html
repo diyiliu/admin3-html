@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Admin - 首页</title>
 
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap.css" rel="stylesheet">
     <link href="./css/font-awesome.min.css" rel="stylesheet">
     <link href="css/admin.css" rel="stylesheet">
 
@@ -108,49 +108,14 @@
         <div class="col-md-12">
             <div class="content-container">
                 <div class="row">
-                    <div class="col-md-3 content-widget white-bg">
-                        <div class="tool">
-                            <a href="#"><i class="fa fa-edit"></i></a>
-                            <a href="#"><i class="fa fa-trash-o"></i></a>
-                        </div>
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#"><img class="media-object img-circle" src="./img/person.jpg"></a>
-                            </div>
-                            <div class="media-body">
-                                <h3 class="blue-text">李莉</h3>
-                                <p class="small">合伙人律师</p>
-                            </div>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table">
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="circle blue-bg"></div>
-                                    </td>
-                                    <td class="title">关 注 度</td>
-                                    <td>22</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="circle pink-bg"></div>
-                                    </td>
-                                    <td class="title">从业年限</td>
-                                    <td>15</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="circle yellow-bg"></div>
-                                    </td>
-                                    <td class="title">满 意 率</td>
-                                    <td>8</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                    <div id="lawyer-add" class="col-md-3 content-widget content-first">
+                        <i class="fa fa-heart"></i>
+                        <h2 class="white-text">LAWYER</h2>
+                        <div class="view-img-btn-wrap">
+                            <a href="" class="btn btn-default">添加</a>
                         </div>
                     </div>
-                    <div class="col-md-3 content-widget white-bg">
+                    <div id="lawyer" class="col-md-3 content-widget white-bg">
                         <div class="tool">
                             <a href="#"><i class="fa fa-edit"></i></a>
                             <a href="#"><i class="fa fa-trash-o"></i></a>
@@ -498,5 +463,13 @@
 
 <script src="./js/jquery-1.11.1.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        $('#lawyer-add').height($('#lawyer').height());
+    });
+    $(window).resize(function() {
+        $('#lawyer-add').height($('#lawyer').height());
+    });
+</script>
 </body>
 </html>
