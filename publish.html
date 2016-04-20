@@ -102,14 +102,6 @@
         </ol>
     </div><!--/.row-->
 
-    <!--
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">欢迎，你好！</h1>
-        </div>
-    </div>
-    /.row-->
-
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
@@ -142,6 +134,12 @@
                         <div class="form-group">
                             <label for="summary">正 文</label>
                             <div id="summernote"></div>
+                        </div>
+
+                        <div>
+                            <div class="col-md-12">
+                                <button type="button" onclick="javascript:save();" class="btn btn-default pull-right">提交</button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -176,9 +174,17 @@
         $('#summernote').summernote({
             lang: 'zh-CN',
             height: 350,
-            focus: true
+            focus: true,
+            codemirror: {
+                theme: 'monokai'
+            }
         });
     });
+
+    function save(){
+        var content = $('#summernote').summernote('code');
+        console.log(content);
+    }
 </script>
 </body>
 </html>
